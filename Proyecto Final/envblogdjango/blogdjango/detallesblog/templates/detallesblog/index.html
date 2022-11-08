@@ -1,0 +1,306 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Categorias</title>
+
+    {% load bootstrap4 %}
+    
+    {% bootstrap_css %}
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+
+    {% load icon %}
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-warning flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Blog de Futbol</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</header>
+
+<div class="container-fluid">
+  <div class="d-flex flex-row-reverse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" >
+              <span data-feather="dribbble" class="align-text-bottom"></span>
+              {% icon "dribbble" %}
+              Estadisticas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias">
+              <span data-feather="file" class="align-text-bottom"></span>
+              {% icon "grid" %}
+              Categorias
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias">
+              <span data-feather="shopping-cart" class="align-text-bottom"></span>
+              {% icon "arrow-right-circle" %}
+              Primera A
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias/primerab">
+              <span data-feather="users" class="align-text-bottom"></span>
+              {% icon "arrow-right-circle" %}
+              Nacional B
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias/error">
+              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+              {% icon "arrow-right-circle" %}
+              Premier League
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias/error">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              {% icon "arrow-right-circle" %}
+              Serie A
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          <span>Saved reports</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle" class="align-text-bottom"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+                <a class="nav-link active" href="../detallesblog">
+                  <span data-feather="align-justify" class="align-text-bottom"></span>
+                  {% icon "align-justify" %}
+                  Noticias
+                </a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../entradas">
+              <span data-feather="edit-3" class="align-text-bottom"></span>
+              {% icon "edit-3" %}
+              Entradas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../usuarios">
+              <span data-feather="users" class="align-text-bottom"></span>
+              {% icon "users" %}
+              Usuarios
+            </a>
+          </li>
+        
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Noticias</h1>
+       
+    
+      </div>
+
+      
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>
+        <div class="mb-3">
+            <input class="form-control form-control-sm" id="formFileSm" type="file">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/11/07/uLe98crBe_1290x760__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>El primer banderazo argentino en Qatar</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Faltan dos semanas para el debut de la Selección en el Mundial, el 22 de noviembre a las 7 ante Arabia Saudita. Pero sobran las ilusiones argentias. Los hinchas de la Scaloneta armaron este lunes el primer banderazo en las calles de Doha. Un anticipo de lo que se vendrá: despliegue de pasión celeste y blanca para alentar a Messi y compañía...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/03/30/91Agz9ROj_860x575__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>El Muñeco se despide del predio</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Faltan dos semanas para el debut de la Selección en el Mundial, el 22 de noviembre a las 7 ante Arabia Saudita. Pero sobran las ilusiones argentias. Los hinchas de la Scaloneta armaron este lunes el primer banderazo en las calles de Doha. Un anticipo de lo que se vendrá: despliegue de pasión celeste y blanca para alentar a Messi y compañía...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/11/06/ik1BJZEpR_1290x760__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>El delantero de Racing, ausente por una lesión</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Racing se coronó campeón en una nueva edición del Trofeo de Campeones y la final estuvo repleta de condimentos. El Xeneize y la Academia protagonizaron un partido más que polémico en San Luis, el cual fue triunfo para la Academia por 2 a 1 y terminó con nada menos que ¡10 jugadores expulsado! Y los jugadores campeones le siguen metiendo picante desde los festejos.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/11/07/Ep7ikdGbI_1290x760__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>¿Qué les dijo Riquelme a los jugadores de Boca para que fueran a recibir la medalla?</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Al margen del gol de Carlos Alcaraz en la última jugada, el final del Trofeo de Campeones tuvo un sinfín de situaciones insólitas: desde el festejo sobrador del volante de Racing y la reacción de los jugadores de Boca yendose encima de él, pasando por el desmadre de Facundo Tello y las ¡11 expulsiones! con la que cerró la jornada y hasta los futbolistas de Boca retirándose directamente al vestuario sin quedarse a la entrega de medallas. Y allí entró en acción Juan Román Riquelme.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/11/07/X0cFRaHKP_1290x760__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>Champions League: así serán los cruces por los octavos de final</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Llegó el día. Ya finalizada la Fase de Grupos de la Champions League y con los 16 clasificados confirmados para los octavos de final, este lunes se realizó el tan esperado sorteo para conocer cómo serán los cruces en la próxima instancia del certamen internacional más importante de Europa.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://www.ole.com.ar/images/2022/11/07/7YqrPh7ho_1290x760__1.jpg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><b>Choque de gigantes en Europa League: Barcelona vs. el Manchester United de Cristiano y Lisandro</b></text>
+      
+                  <div class="card-body">
+                    <p class="card-text">Mientras el mundo ya palpita el Mundial de Qatar 2022, este lunes se realizaron los sorteos para los octavos de final de la Champions League y los 16avos de la Europa League, que se disputarán en febrero del 2023. Y como para ya ir calentando la previa a casi tres meses de los cruces, lo cierto es que el sorteo dejó muchas series interesantes, que sin dudas prometen espectáculo</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-danger">Dislike</button>
+                      </div>
+                      <small class="text-muted">9 Noviembre</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </main> 
+</div>
+  
+
+    {% bootstrap_javascript jquery='full' %}
+    <script type="text/javascript" src="{% static 'js/feather.min.js' %}"
+    </body>
+</html>
